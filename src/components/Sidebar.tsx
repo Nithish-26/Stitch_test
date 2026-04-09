@@ -9,7 +9,7 @@ export function Sidebar() {
     { name: "Analytics", path: "/analytics", icon: "insights" },
     { name: "Audience", path: "/audience", icon: "group" },
     { name: "Revenue", path: "/revenue", icon: "payments" },
-    { name: "Settings", path: "#", icon: "settings" },
+    { name: "Settings", path: "/settings", icon: "settings" },
   ];
 
   return (
