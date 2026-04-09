@@ -1,6 +1,10 @@
+import { useState } from 'react';
+
 export function Audience() {
-  const heatmapColors = ['bg-primary/5', 'bg-primary/10', 'bg-primary/20', 'bg-primary/50', 'bg-primary/80', 'bg-primary shadow-[0_0_5px_#EDB1FF]'];
-  const heatmapData = Array.from({ length: 144 }).map(() => heatmapColors[Math.floor(Math.random() * heatmapColors.length)]);
+  const [heatmapData] = useState<string[]>(() => {
+    const heatmapColors = ['bg-primary/5', 'bg-primary/10', 'bg-primary/20', 'bg-primary/50', 'bg-primary/80', 'bg-primary shadow-[0_0_5px_#EDB1FF]'];
+    return Array.from({ length: 144 }).map(() => heatmapColors[Math.floor(Math.random() * heatmapColors.length)]);
+  });
 
   return (
     <div className="p-8 space-y-8 flex-1">
